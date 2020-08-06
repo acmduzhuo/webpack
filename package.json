@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/acmduzhuo/webpack/issues"
   },
-  "homepage": "https://github.com/acmduzhuo/webpack#readme"
+  "homepage": "https://github.com/acmduzhuo/webpack#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1"
+  }
 }
