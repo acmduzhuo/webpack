@@ -31,8 +31,9 @@ const arrStr = ['毛利', '柯南', '张起灵', '吴邪', '胖子']
 
 //定义一个空数组，将来用来存放名称标签
 const nameArr = []
+//注意：react中需要把key添加给被foreach map for循环直接控制的元素
 arrStr.forEach(item =>{
-const temp = <h5>{item}</h5>
+const temp = <h5 key={item}>{item}</h5>
 nameArr.push(temp)
 })
 
@@ -55,9 +56,9 @@ ReactDOM.render(<div>
     <hr/>
     {h1}
     <hr/>
-    {arr}
+    {/* {arr} */}
     <hr/>
     {nameArr}
     <hr />
-    {arrStr.map(item =>  <h3>{item}</h3>)}
+    {arrStr.map(item =>  <div key={item}><h3>{item}</h3></div>)}
     </div>, document.getElementById('app'))
