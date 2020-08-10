@@ -2,6 +2,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+//第一种创建组件的方式
+function Hello(props){
+    //如果在一个组件中，return一个null，则表示此组件什么都不渲染
+    //return null
+    //必须返回一个合法的jsx
+    ///props.name = 'zs'
+    console.log(props)//形参
+    //不论是Vue还是React，组件中的props永远都只能是只读的，不能被重新赋值
+return <div>这是Hello组件 --- {props.name} --- {props.age} --- {props.gender}</div>//可以返回一个虚拟DOM
+}
+
+const dog = {
+    name:'大黄',
+    age : 3,
+    gender : '雄'
+}
+
 // const myh1=React.createElement('h1',{id:'myh1',title:'this is a h1'},'这是一个大大的h1')
 
 // const mydiv=React.createElement('div',null,'这是一个div元素', myh1)
@@ -46,6 +63,9 @@ console.log(res)
 //3、调用render函数渲染，jsx SML比HTML严格得多
 //当需要JSX控制的区域内，写一些JS表达式，则需要{}
 ReactDOM.render(<div>
+    {/* 直接以标签形式置于界面上 */}
+    <Hello{...dog}></Hello>
+    <hr />
     {a + 2}
     <hr/>
     {str}
@@ -57,8 +77,14 @@ ReactDOM.render(<div>
     {h1}
     <hr/>
     {/* {arr} */}
+    {
+        //这是注释
+    }
     <hr/>
     {nameArr}
     <hr />
     {arrStr.map(item =>  <div key={item}><h3>{item}</h3></div>)}
+    <hr />
+    <p className="mystyle"> !!! </p>
+    <label htmlFor="ooo"></label>
     </div>, document.getElementById('app'))
