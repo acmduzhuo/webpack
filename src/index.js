@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 
 //导入Hello文件
 //默认，如果不做单独配置的话，不能省略.jsx
-import Hello from './components/Hello.jsx'
+import Hello from './components/Hello'
 
 
 const dog = {
