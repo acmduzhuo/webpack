@@ -15,8 +15,11 @@ module.exports = {
             {test: /\.js|jsx$/, use:'babel-loader', exclude:/node_modules/}
         ]
     },
-    // resolve:{
-    //     extensions:['.js','.jsx','.json']//固定写法，这几个文件的后缀名，可以省略不写
-    // }
+    resolve:{
+        extensions:['.js','.jsx','.json'],//固定写法，这几个文件的后缀名，可以省略不写
+        alias:{
+            '@':path.join(__dirname, './src') //这样，@就表示项目根目录中src的这一层路径
+        }
+    }
     //不加resolve，默认补全.js .json
 }
