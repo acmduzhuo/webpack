@@ -59,7 +59,7 @@ console.log(res)
 //当需要JSX控制的区域内，写一些JS表达式，则需要{}
 ReactDOM.render(<div>
     {/* 直接以标签形式置于界面上 */}
-    <Hello{...dog}></Hello>
+    <Hello name={dog.name} age={dog.age} gender={dog.gender}></Hello>
     <hr />
     {a + 2}
     <hr/>
