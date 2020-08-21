@@ -1,7 +1,12 @@
 import React from 'react'
 
 //导入 列表组件 所需要的样式表
+
+//样式表是不是只在List组件生效？
+//直接导入的cssoj默认是全局生效
+
 import cssobj from '@/css/cmtlist.css'
+console.log(cssobj);//空对象，没有向外暴露成员
 
 //导入评论项子组件
 import CmtItem from './CmtItem2'
