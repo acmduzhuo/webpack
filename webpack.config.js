@@ -13,7 +13,10 @@ module.exports = {
     module:{//所有第三方模块的配置规则
         rules:[//第三方匹配规则
             {test: /\.js|jsx$/, use:'babel-loader', exclude:/node_modules/},
-            {test: /\.css$/, use: ['style-loader', 'css-loader']},//打包处理CSS样式表的第三方loader,从右到左调用
+
+            //大家可以在CSS-loader之后，通过？增加参数，
+            //其中有一个固定的参数，modules，表示为普通的CSS样式表，启用模块化
+            {test: /\.css$/, use: ['style-loader', 'css-loader?modules']},//打包处理CSS样式表的第三方loader,从右到左调用，只有CSS-loader才有
         ]
     },
     resolve:{
