@@ -1,5 +1,5 @@
 /* 没有模块作用域 */
-.title{
+:local(.title){
     color: red;
     text-align: center;
     font-weight: 200;
@@ -11,3 +11,8 @@
     font-style: italic;
     
 } */
+
+/* 注意 被global()包裹起来的类名，不会被模块化，而是全局生效 */
+:global(.test){
+    font-style: italic;
+}

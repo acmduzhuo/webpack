@@ -31,8 +31,10 @@ export default class CmtList extends React.Component{
 
     render(){
         return <div>
-            <h1 className={cssobj.title}>这是评论区列表组件</h1>
-
+            <h1 className={cssobj.title} className="teast">这是评论区列表组件</h1>
+            {/* <h1 className={cssobj.title + ' test'}>这是评论区列表组件</h1> */}
+            {/* <h1 className={[cssobj.title ,' test'].join(' ')}>这是评论区列表组件</h1> */}
+            {/* 字符串 */}
 
             {this.state.CommentList.map(item => <CmtItem {...item} key={item.id}></CmtItem>)}
         </div>
