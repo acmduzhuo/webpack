@@ -10,6 +10,11 @@ import cssobj from '@/css/cmtlist.css'
 
 console.log(cssobj);//空对象，没有向外暴露成员
 
+//如果已安装到了 node_modules，则可以不写node
+//直接包名引入自己的样式表和模块
+import bootcss from 'bootstrap/dist/css/bootstrap.css'
+
+console.log(bootcss);
 //导入评论项子组件
 import CmtItem from './CmtItem2'
 
@@ -31,8 +36,11 @@ export default class CmtList extends React.Component{
 
     render(){
         return <div>
-            <h1 className={cssobj.title} className="teast">这是评论区列表组件</h1>
-            {/* <h1 className={cssobj.title + ' test'}>这是评论区列表组件</h1> */}
+            {/* <h1 className={cssobj.title} className="teast">这是评论区列表组件</h1> */}
+            <h1 className={cssobj.title + ' test'}>这是评论区列表组件</h1>
+
+            <button className={[bootcss.btn, bootcss['btn-primary']].join(' ')}>按钮</button>
+            {/* {}绑定 */}
             {/* <h1 className={[cssobj.title ,' test'].join(' ')}>这是评论区列表组件</h1> */}
             {/* 字符串 */}
 

@@ -1,4 +1,6 @@
 /* 没有模块作用域 */
+
+/* 注意 被local包裹起来的类名，会被模块化，默认情况下，都有类名和ID都会被模块化 */
 :local(.title){
     color: red;
     text-align: center;
