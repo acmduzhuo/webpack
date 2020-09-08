@@ -3,8 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 //导入评论项子组件
-import CmtItem from '@/components/CmtItem2'
-import CmtList from './components/CmtList2'
+import CmtList from '@/components/CmtList2'
 
 
 
