@@ -1,3 +1,4 @@
+//#region 
 import React from 'react'
 
 export default class BindEvent extends React.Component{
@@ -57,3 +58,4 @@ export default class BindEvent extends React.Component{
     //     console.log("aaa");
     // }
 }
+//#endregion
